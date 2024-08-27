@@ -1,0 +1,6 @@
+<% messages.each do |message| %>
+  <div class="message">
+    <p><strong><%= message.user.name %>:</strong></p>
+    <p><%= message.content %></p>
+  </div>
+<% end %>

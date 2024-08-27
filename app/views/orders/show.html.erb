@@ -1,0 +1,41 @@
+<h1>Order Details</h1>
+
+<p>
+  <strong>User:</strong>
+  <%= @order.user.name %>
+</p>
+
+<p>
+  <strong>Total Price:</strong>
+  <%= number_to_currency(@order.total_price) %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @order.status %>
+</p>
+
+<h2>Order Items</h2>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Good</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Total Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @order.order_items.each do |order_item| %>
+    <tr>
+      <td><%= order_item.good.name %></td>
+      <td><%= order_item.quantity %></td>
+      <td><%= number_to_currency(order_item.price) %></td>
+      <td><%= number_to_currency(order_item.total_price) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Back', orders_path, class: 'btn btn-secondary' %>

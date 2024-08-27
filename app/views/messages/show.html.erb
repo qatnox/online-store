@@ -1,0 +1,13 @@
+<h1>Message Details</h1>
+
+<p>
+  <strong>User:</strong>
+  <%= @message.user.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @message.content %>
+</p>
+
+<%= link_to 'Back', messages_path, class: 'btn btn-secondary' %>

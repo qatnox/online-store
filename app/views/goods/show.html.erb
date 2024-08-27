@@ -1,0 +1,23 @@
+<h1><%= @good.name %></h1>
+
+<p>
+  <strong>Description:</strong>
+  <%= @good.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency(@good.price) %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @good.weight %> kg
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @good.category.name %>
+</p>
+
+<%= link_to 'Back', goods_path, class: 'btn btn-secondary' %>

@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: online_store
+  username: postgres
+  password: ' '
+  host: localhost
+  port: 5432
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: online_store_development
+
+test:
+  <<: *default
+  database: online_store_test
+
+production:
+  <<: *default
+  database: online_store_production
+  username: online_store
+  password: <%= ENV["ANIME_LISTING_DATABASE_PASSWORD"] %>

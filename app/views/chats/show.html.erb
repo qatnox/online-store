@@ -1,0 +1,28 @@
+<h1>Chat Details</h1>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @chat.customer.name %>
+</p>
+
+<p>
+  <strong>Consultant:</strong>
+  <%= @chat.consultant.name %>
+</p>
+
+<h2>Messages</h2>
+
+<%= render 'messages/messages', messages: @chat.messages %>
+
+<%= form_with(model: [@chat, @message], local: true) do |form| %>
+  <div class="field">
+    <%= form.label :content, 'New Message' %>
+    <%= form.text_area :content, rows: 3, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Send', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', chats_path, class: 'btn btn-secondary' %>

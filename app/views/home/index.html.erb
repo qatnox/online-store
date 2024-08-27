@@ -1,0 +1,13 @@
+<h1>Welcome to the Auto Parts Store</h1>
+
+<div class="products">
+  <% @goods.each do |good| %>
+    <div class="product">
+      <h2><%= good.name %></h2>
+      <p>Description: <%= good.description %></p>
+      <p>Price: <%= good.price %> $</p>
+      <p>Weight: <%= good.weight %> kg</p>
+      <p>Category: <%= good.category.name %></p>
+    </div>
+  <% end %>
+</div>

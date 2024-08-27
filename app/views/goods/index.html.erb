@@ -1,0 +1,32 @@
+<h1>Goods Catalog</h1>
+
+<%= link_to 'New Product', new_good_path, class: 'btn btn-primary' %>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Weight</th>
+    <th>Category</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @goods.each do |good| %>
+    <tr>
+      <td><%= good.name %></td>
+      <td><%= good.description %></td>
+      <td><%= number_to_currency(good.price) %></td>
+      <td><%= good.weight %> kg</td>
+      <td><%= good.category.name %></td>
+      <td>
+        <%= link_to 'Show', good_path(good), class: 'btn btn-info' %>
+        <%= link_to 'Edit', edit_good_path(good), class: 'btn btn-warning' %>
+        <%= link_to 'Destroy', good_path(good), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

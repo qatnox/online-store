@@ -1,0 +1,29 @@
+<!-- app/views/layouts/application.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Store</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+</head>
+
+<body>
+<%= yield %>
+
+<!-- Chat Button -->
+<button id="chat-button" class="chat-button">💬</button>
+
+<!-- Chat Modal -->
+<div id="chat-modal" class="chat-modal">
+  <div class="chat-modal-content">
+    <span id="close-chat" class="close-chat">&times;</span>
+    <h2>Chat with a consultant</h2>
+    <div id="chat-content">
+      <!-- Тут буде розташований чат -->
+    </div>
+  </div>
+</div>
+</body>
+</html>

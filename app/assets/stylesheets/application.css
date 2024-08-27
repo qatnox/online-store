@@ -1,0 +1,249 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    color: #222;
+}
+   .container {
+       width: 80%;
+       max-width: 1200px;
+       margin: auto;
+       padding: 0 15px;
+   }
+
+header {
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    background: #fff;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    color: #777;
+}
+   .card {
+       background: #fff;
+       border: 1px solid #ddd;
+       border-radius: 5px;
+       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+       padding: 1.5rem;
+       margin-bottom: 1.5rem;
+   }
+
+.btn {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    &.btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+
+        &:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    }
+
+    &.btn-secondary {
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+
+        &:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+    }
+
+    &.btn-danger {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+
+        &:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+    }
+}
+   .form-group {
+       margin-bottom: 1rem;
+   }
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+   table {
+       width: 100%;
+       border-collapse: collapse;
+       margin-bottom: 1.5rem;
+   }
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+}
+   .alert {
+       padding: 0.75rem 1.25rem;
+       margin-bottom: 1rem;
+       border: 1px solid transparent;
+       border-radius: 5px;
+
+       &.alert-success {
+           color: #155724;
+           background-color: #d4edda;
+           border-color: #c3e6cb;
+       }
+
+       &.alert-danger {
+           color: #721c24;
+           background-color: #f8d7da;
+           border-color: #f5c6cb;
+       }
+
+       &.alert-info {
+           color: #0c5460;
+           background-color: #d1ecf1;
+           border-color: #bee5eb;
+       }
+   }
+
+   .pagination {
+       display: flex;
+       padding: 0;
+       list-style: none;
+       border-radius: 0.25rem;
+   }
+
+.page-item {
+    margin: 0;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin: 0;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        color: #0056b3;
+        background-color: #f1f1f1;
+        border-color: #ddd;
+    }
+}
+
+.page-item.active .page-link {
+    z-index: 2;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat-button:hover {
+    background-color: #0056b3;
+}
+
+.chat-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.chat-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close-chat {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-chat:hover,
+.close-chat:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
